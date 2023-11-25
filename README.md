@@ -8,6 +8,6 @@ This is the official website of Github Package Manager, hosted by Vercel, and ma
 
 ## Live View
 Check out the live and up-to-date site using the following link. You can find documentation, downloads, and more! <br>
-[https://flask-python-template.vercel.app/](https://ghpm.vercel.app/)
+[https://ghpm.vercel.app/](https://ghpm.vercel.app/)
 
 
