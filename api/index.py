@@ -8,12 +8,10 @@ def home():
 
 @app.route('/login')
 def login():
-    rurl = request.args.get('rurl')
     return redirect("/download")
 
 @app.route('/create')
 def create():
-    rurl = request.args.get('rurl')
     return render_template("create.html")
 
 @app.route('/contact')
