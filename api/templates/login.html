@@ -85,15 +85,16 @@
         <a class="link" href="/contact">Contact</a>
       </div>
     </header>
-<center><h1>Login to GHPM</h1></center>
+<center><h1>Create Account</h1></center>
     <div class="container">
       <div class="box">
       Before you download, please fill out some quick information so we can collect some basic data on users. This data is used collectively, and not individually. We will not contact you with the email your provide. 
-      <br><br>  <input placeholder="Username"></input><br>
-      <input type="password" placeholder="Password"></input><br>
-       <input placeholder="Your Email"></input><br>
-       <input placeholder="Your Country"></input><br><br>
-      <button class="send_it_off">Download!</button>
+      <br><br>Remember your username and password, as they can be used to login later in order to change settings, upload git listings, and check logs.<br><br> 
+        <input id="username" placeholder="Username"></input><br>
+        <input id="password" type="password" placeholder="Password"></input><br>
+       <input id="email" placeholder="Your Email"></input><br>
+       <input id= "country" placeholder="Your Country"></input><br><br>
+      <button onclick="ready_to_go(self)" class="send_it_off">Download!</button>
       </div>
     </div>
    
@@ -103,6 +104,26 @@
   </body>
 
   <script>
+function ready_to_go(self) {
+  
+  // Extract form data:
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const email = document.getElementById("email").value;
+  const country = document.getElementById("country").value;
 
+  // Build the URL:
+  const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`//tf is this url bruh
+
+  // Bring the user to download URL (Downloads if valid, shows error if not)
+  window.location.href = URL
+  
+  self.innerHTML = "Downloading . . .";
+  self.style.backgroundColor = "green";
+
+  // Bring the client to the documentation page as it downloads.
+  window.location.href = "/download"
+  
+}
   </script>
 </html>
