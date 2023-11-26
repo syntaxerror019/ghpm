@@ -104,7 +104,7 @@
   </body>
 
   <script>
-function ready_to_go(self) {
+function ready_to_go(button) {
   
   // Extract form data:
   const username = document.getElementById("username").value;
@@ -118,8 +118,8 @@ function ready_to_go(self) {
   // Bring the user to download URL (Downloads if valid, shows error if not)
   window.location.href = URL
   
-  self.innerHTML = "Downloading . . .";
-  self.style.backgroundColor = "green";
+  button.innerHTML = "Downloading . . .";
+  button.style.backgroundColor = "green";
 
   // Bring the client to the documentation page as it downloads.
   setTimeout(function() {
