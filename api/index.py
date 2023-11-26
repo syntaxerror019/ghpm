@@ -19,7 +19,7 @@ def download():
     return render_template("get.html")
 
 @app.route('/create')
-def download():
+def create():
     return render_template("login.html") #(create account page actually)
 
 
