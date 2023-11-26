@@ -6,13 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/login')
+@app.route('/login')## lazi
 def login():
     return redirect("/download")
-
-@app.route('/create')
-def create():
-    return render_template("create.html")
 
 @app.route('/contact')
 def contact():
@@ -21,6 +17,10 @@ def contact():
 @app.route('/download')
 def download():
     return render_template("get.html")
+
+@app.route('/create')
+def download():
+    return render_template("login.html") #(create account page actually)
 
 
 
