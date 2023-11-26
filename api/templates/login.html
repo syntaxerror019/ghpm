@@ -105,29 +105,26 @@
 
   <script>
 function ready_to_go(button) {
-  
-  // Extract form data:
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const email = document.getElementById("email").value;
-  const country = document.getElementById("country").value;
+    // Extract form data:
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const country = document.getElementById("country").value;
 
-  // Build the URL:
-  const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`//tf is this url bruh
+    // Build the URL:
+    const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`;
 
-  // Bring the user to download URL (Downloads if valid, shows error if not)
-  window.location.href = URL
+    button.innerHTML = "Downloading . . .";
+    button.style.backgroundColor = "green";
   
-  button.innerHTML = "Downloading . . .";
-  button.style.backgroundColor = "green";
-  alert('done')
+    // Bring the user to download URL (Downloads if valid, shows error if not)
+    window.location.href = URL;
 
-  // Bring the client to the documentation page as it downloads.
-  setTimeout(function() {
-          window.location.href = "/download";
-      }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
-  });
-  
+    // Bring the client to the documentation page as it downloads.
+    setTimeout(function () {
+        window.location.href = "/download";
+    }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
 }
+
   </script>
 </html>
