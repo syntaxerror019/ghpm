@@ -94,7 +94,7 @@
         <input id="password" type="password" placeholder="Password"></input><br>
        <input id="email" placeholder="Your Email"></input><br>
        <input id= "country" placeholder="Your Country"></input><br><br>
-      <button onclick="ready_to_go(self)" class="send_it_off">Download!</button>
+      <button onclick="ready_to_go(this)" class="send_it_off">Download!</button>
       </div>
     </div>
    
@@ -122,7 +122,10 @@ function ready_to_go(self) {
   self.style.backgroundColor = "green";
 
   // Bring the client to the documentation page as it downloads.
-  window.location.href = "/download"
+  setTimeout(function() {
+          window.location.href = "/download";
+      }, 1000); // wait a sec.... (legit, dont question.,.,.,.,)
+  });
   
 }
   </script>
