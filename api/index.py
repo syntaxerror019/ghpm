@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ def home():
 @app.route('/login')
 def login():
     rurl = request.args.get('rurl')
-    return render_template("login.html")
+    return redirect("/download")
 
 @app.route('/create')
 def create():
@@ -19,6 +19,11 @@ def create():
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
+
+@app.route('/download')
+def download():
+    return render_template("get.html")
+
 
 
 @app.errorhandler(404)
