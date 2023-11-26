@@ -90,11 +90,11 @@
       <div class="box">
       Before you download, please fill out some quick information so we can collect some basic data on users. This data is used collectively, and not individually. We will not contact you with the email your provide. 
       <br><br>Remember your username and password, as they can be used to login later in order to change settings, upload git listings, and check logs.<br><br> 
-        <input id="username" placeholder="Username"></input><br>
-        <input id="password" type="password" placeholder="Password"></input><br>
-       <input id="email" placeholder="Your Email"></input><br>
-       <input id= "country" placeholder="Your Country"></input><br><br>
-      <button onclick="ready_to_go(this)" class="send_it_off">Download!</button>
+        <input onchange="update(this)" id="username" placeholder="Username"></input><br>
+        <input onchange="update(this)" id="password" type="password" placeholder="Password"></input><br>
+        <input onchange="update(this)" id="email" placeholder="Your Email"></input><br>
+        <input onchange="update(this)" id= "country" placeholder="Your Country"></input><br><br>
+      <button id="iut" onclick="ready_to_go(this)" class="send_it_off">Download!</button>
       </div>
     </div>
    
@@ -104,27 +104,57 @@
   </body>
 
   <script>
-function ready_to_go(button) {
-    // Extract form data:
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const email = document.getElementById("email").value;
-    const country = document.getElementById("country").value;
+    // Define some random stuff here
+    const u = "";
+    const p = "";
+    const e = "";
+    const c = "";
 
-    // Build the URL:
-    const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`;
-
-    button.innerHTML = "Downloading . . .";
-    button.style.backgroundColor = "green";
+    // Disable submit button by default.
+    document.getElementById('iut').disabled = true;
+    
+  function update(self) {
+    if (self.id = "username") {
+      u = self.value
+    }
+    if (self.id = "password") {
+      p = self.value
+    }
+    if (self.id = "email") {
+      e = self.value
+    }
+    if (self.id = "country") {
+      c = self.value
+    }
   
-    // Bring the user to download URL (Downloads if valid, shows error if not)
-    window.location.href = URL;
-
-    // Bring the client to the documentation page as it downloads.
-    setTimeout(function () {
-        window.location.href = "https://maliq-barnard.vercel.app/gpm/docs.html";
-    }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
-}
-
+    // Check if all elements have been filled in!
+    if (u != "" && p != "" && e != "" && c != "") {
+      document.getElementById('iut').disabled = false;
+    } else {
+      document.getElementById('iut').disabled = true;
+  }
+  
+      
+  function ready_to_go(button) {
+      // Extract form data:
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value;
+      const country = document.getElementById("country").value;
+  
+      // Build the URL:
+      const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`;
+  
+      button.innerHTML = "Downloading . . .";
+      button.style.backgroundColor = "green";
+    
+      // Bring the user to download URL (Downloads if valid, shows error if not)
+      window.location.href = URL;
+  
+      // Bring the client to the documentation page as it downloads.
+      setTimeout(function () {
+          window.location.href = "https://maliq-barnard.vercel.app/gpm/docs.html";
+      }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
+  }
   </script>
 </html>
