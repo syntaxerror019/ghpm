@@ -120,11 +120,12 @@ function ready_to_go(button) {
   
   button.innerHTML = "Downloading . . .";
   button.style.backgroundColor = "green";
+  alert('done')
 
   // Bring the client to the documentation page as it downloads.
   setTimeout(function() {
           window.location.href = "/download";
-      }, 1000); // wait a sec.... (legit, dont question.,.,.,.,)
+      }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
   });
   
 }
