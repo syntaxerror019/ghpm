@@ -104,37 +104,37 @@
   </body>
 
   <script>
-    // Define some random stuff here
-    const u = "";
-    const p = "";
-    const e = "";
-    const c = "";
-
-    // Disable submit button by default.
-    document.getElementById('iut').disabled = true;
-    
-  function update(self) {
-    if (self.id = "username") {
-      u = self.value
-    }
-    if (self.id = "password") {
-      p = self.value
-    }
-    if (self.id = "email") {
-      e = self.value
-    }
-    if (self.id = "country") {
-      c = self.value
-    }
+     // Define some random stuff here
+  let u = "";
+  let p = "";
+  let e = "";
+  let c = "";
   
-    // Check if all elements have been filled in!
-    if (u != "" && p != "" && e != "" && c != "") {
-      document.getElementById('iut').disabled = false;
-    } else {
-      document.getElementById('iut').disabled = true;
+  // Disable submit button by default.
+  document.getElementById('iut').disabled = true;
+  
+  function update(self) {
+      if (self.id === "username") {
+          u = self.value;
+      }
+      if (self.id === "password") {
+          p = self.value;
+      }
+      if (self.id === "email") {
+          e = self.value;
+      }
+      if (self.id === "country") {
+          c = self.value;
+      }
+  
+      // Check if all elements have been filled in!
+      if (u !== "" && p !== "" && e !== "" && c !== "") {
+          document.getElementById('iut').disabled = false;
+      } else {
+          document.getElementById('iut').disabled = true;
+      }
   }
   
-      
   function ready_to_go(button) {
       // Extract form data:
       const username = document.getElementById("username").value;
@@ -145,16 +145,19 @@
       // Build the URL:
       const URL = `https://hello2022isthe3nd.000webhostapp.com/RegisterAndD.php?username=${username}&password=${password}&country=${country}&email=${email}`;
   
-      button.innerHTML = "Downloading . . .";
-      button.style.backgroundColor = "green";
-    
       // Bring the user to download URL (Downloads if valid, shows error if not)
       window.location.href = URL;
+  
+      // You might want to remove or modify the lines below as they won't have any effect
+      // after the window.location.href redirect.
+      // button.innerHTML = "Downloading . . .";
+      // button.style.backgroundColor = "green";
   
       // Bring the client to the documentation page as it downloads.
       setTimeout(function () {
           window.location.href = "https://maliq-barnard.vercel.app/gpm/docs.html";
       }, 3000); // wait a sec.... (legit, dont question.,.,.,.,)
   }
+
   </script>
 </html>
