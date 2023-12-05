@@ -70,14 +70,23 @@
 
       
 
-.container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            height: 100vh;
-        }
 
       
+
+.container1 {
+            position: relative;
+            display: flex;
+            top: -100px;
+left: 50px;
+
+        }
+
+        .profile-container {
+            cursor: pointer;
+            align-content: left;
+            align-item: left
+        }
+
         .profile-img {
             width: 50px;
             height: 50px;
@@ -128,17 +137,13 @@
                 transform: translateY(0);
             }
         }
-      
     </style>
   </head>
   <body>
 
     <header>
       <h1>🎉 Github Package Manager 🎉</h1>
-          <div class="container">
-        <div class="profile-container" onclick="togglePopup()">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAJYAlgMBIgACEQEDEQH/xAAaAAEBAAMBAQAAAAAAAAAAAAAABAECAwUG/9oACAEBAAAAAPpQAAAAAAGnDnjPXvsAEcwM10gMQcgCmwCOYALaA080b1b85MG3phLIZv2OUQv7CHgdLg80V1CDib3jXzxVWIeAqoI+IspE0Y6bGmg9HoNfNxmvsE8rp6IJo7eoE03odQJ+oDGncAxqBtkAGMMsgAAAAAAH/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAoCAhADEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/xAAuEAACAAQEAwYHAQAAAAAAAAABAgADESAEEiExMEFhECJRUoGRExQjMjNQcUL/2gAIAQEAAT8A/WNMRNzDYnyr7wcRM8RHx5vmgYiZ0MLiVP3AiFZWFQQeHsCSaAQ+IJ0TQeN4JU1BoYlz66P78EkAEkxNmmYenCkzqd1tuBiHq2QbDfiSJmYZTuLpjZELWojOdIWUi8q/2Mq+UQ0lTtoYZSpobEYowN2Jb7V9bACSAIVQoAFk1My9RbIassdNLcQfqHoBZK/IvCwx0cW4j8z2IcrqbWOVSbcNu/pbiBSZ/RbKmigVrJszNoNrcMO6x624laqG8Dasp25Rmmy4+YfpH1Zu9aQyMu4tlLllqLWUMpB5wQQSDuOwAkgAawkoLqdTdMk819u2UmdwOW5vny698evZKTINdzwJyf7Hr2SpeRep34BkATAw28ODvEqSEJJ1PLhEX0gDi0EUikUig/Xf/8QAFBEBAAAAAAAAAAAAAAAAAAAAYP/aAAgBAgEBPwBJ/8QAFBEBAAAAAAAAAAAAAAAAAAAAYP/aAAgBAwEBPwBJ/9k=" alt="Profile Picture" class="profile-img">
-        </div>
+      
 
     </div>
       <div class="link">
@@ -151,15 +156,18 @@
         |
         <a class="link" href="/contact">Contact</a>
       </div>
-              <div class="popup-container" id="popupContainer">
-            <p>GHPM Login</p>
+           
+    </header>
+<div class="container1">
+        <div class="profile-container" onclick="togglePopup()">
+            <img src="https://i.pinimg.com/originals/1e/f8/15/1ef8156889dba99417ff2b3a6d99988d.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="popup-container" id="popupContainer">
+            <h2>Login or Sign Up</h2>
             <!-- <button onclick="closePopup()">Close</button> -->
-          <button>Login to GHPM</button>
-            
+            <button>Log in to GHPM</button>
             <p>Don't have an account? Create one <a href="#">here</a>.</p>
         </div>
-    </header>
-
     <div class="container">
       <div class="box">
         <p>
