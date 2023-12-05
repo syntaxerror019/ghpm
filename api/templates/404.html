@@ -164,6 +164,14 @@ left: 50px;
   </body>
 
   <script>
+        function togglePopup() {
+            const popupContainer = document.getElementById('popupContainer');
+            popupContainer.classList.toggle('active');
+        }
 
+        function closePopup() {
+            const popupContainer = document.getElementById('popupContainer');
+            popupContainer.classList.remove('active');
+        }
   </script>
 </html>
