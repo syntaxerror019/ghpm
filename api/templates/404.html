@@ -56,6 +56,73 @@
         font-size: 120%;
         color: #ffa600a8;
       }
+
+
+      
+.container1 {
+            position: relative;
+            display: flex;
+            top: -100px;
+left: 50px;
+
+        }
+
+        .profile-container {
+            cursor: pointer;
+            align-content: left;
+            align-item: left
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .popup-container {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 10px; /* Updated to left */
+            padding: 20px; /* Increased padding */
+            background-color: #000; /* Black background */
+            color: #ff8c00; /* Orange text */
+            border: 1px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-container p {
+            margin-bottom: 15px;
+        }
+
+        .popup-container button {
+            background-color: #ff8c00; /* Orange button */
+            color: #000; /* Black text */
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add your styles for the login and sign up form elements here */
+
+        /* Animation for the popup */
+        .popup-container.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
   </head>
   <body>
@@ -73,7 +140,17 @@
         <a class="link" href="/contact">Contact</a>
       </div>
     </header>
-
+<div class="container1">
+        <div class="profile-container" onclick="togglePopup()">
+            <img src="https://i.pinimg.com/originals/1e/f8/15/1ef8156889dba99417ff2b3a6d99988d.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="popup-container" id="popupContainer">
+            <h2>Login or Sign Up</h2>
+            <!-- <button onclick="closePopup()">Close</button> -->
+            <button>Log in to GHPM</button>
+            <p>Don't have an account? Create one <a href="#">here</a>.</p>
+        </div>
+    </div>
     <div class="container">
         <p style="font-size: 160%">
           404 - Page Not Found! 
