@@ -7,7 +7,141 @@
     <title>GHPM</title>
   </head>
   <body>
+<style>
+      body {
+        background-color: #121212;
+        color: #ffa500; /* Orangy-dark text color */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
+      header {
+        background-color: #333; /* Dark header background color */
+        padding: 1em;
+        text-align: center;
+      }
+
+      header h1 {
+        color: #ffa500; /* Orangy-dark heading color */
+        margin: 0;
+      }
+
+      .container {
+        text-align: left;
+        max-width: 800px;
+        margin: auto;
+        flex-grow: 1;
+        padding: 20px;
+      }
+
+      .box {
+        background-color: #222; /* Dark box background color */
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 1px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+
+      footer {
+        background-color: #333; /* Dark footer background color */
+        padding: 1em;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+      }
+      .link {
+        font-size: 120%;
+        color: #ffa600a8;
+      }
+              .code {
+            background-color: #445061;
+            border: 1px solid #31363d;
+            border-radius: 4px;
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+        }
+      a {
+color: lightblue;
+      }
+
+      
+      
+
+.container1 {
+            position: relative;
+            display: flex;
+            top: -80px;
+left: 50px;
+
+        }
+
+        .profile-container {
+            cursor: pointer;
+            align-content: left;
+            align-item: left
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .popup-container {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 10px; /* Updated to left */
+            padding: 20px; /* Increased padding */
+            background-color: #000; /* Black background */
+            color: #ff8c00; /* Orange text */
+            border: 1px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-container p {
+            margin-bottom: 15px;
+        }
+
+        .popup-container button {
+            background-color: #ff8c00; /* Orange button */
+            color: #000; /* Black text */
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add your styles for the login and sign up form elements here */
+
+        /* Animation for the popup */
+        .popup-container.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
     <header>
       <h1>🎉 Github Package Manager 🎉</h1>
       
